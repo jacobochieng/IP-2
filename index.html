@@ -4,11 +4,11 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Birthday Detector</title>
       <h1>Birthday Detector</h1>
-        <script src="js/scripts.js"></script>
+        <p id="male"></p>
         <script>
 function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
+  var male = document.forms["myForm"]["fname"].value;
+  if (male == "") {
     alert("Name must be filled out");
     return false;
   }
@@ -18,8 +18,12 @@ function validateForm() {
    <body>
      <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
   Name: <input type="text" name="fname">
-  <input type="submit" value="Submit">
+  <input type="submit" value="Enter">
      </form>
+
+     <br>
+
+     <button onclick=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]>"male"</button>
 
   </body>
 </html> 
