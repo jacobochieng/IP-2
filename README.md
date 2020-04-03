@@ -9,6 +9,10 @@ To start using this project use the following commands:
 - `git clone https://github.com/jacobochieng/index.git`
 - `cd index`
 - `code .` [//]: # (this is if Visual Studio Code is your preferred text editor)
+TOOLS USED
+-css
+-html
+-javascript
 
 ##LISENCE
 
