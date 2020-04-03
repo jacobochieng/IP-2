@@ -8,8 +8,8 @@ var  YY = 'Year digits'
 var MM = 'Month'
 var  DD = 'Day of the month'
 var mod = 'modulus function'
-var number1 = parseInt(prompt("Enter a birthday:"));
-var result = add(number1);
+var name = parseInt(prompt("Enter a birthday:"));
+var result = add(name);
 alert(result);
 participants.forEach(function(male){
      console.log(male)
