@@ -2,6 +2,9 @@ var add = function(number1, number2) {
   return number1 + number2;
 };
 
+const male = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
+var female = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
+var male = 'male'
 var CC = 'century digits'
 var  YY = 'Year digits'
 var MM = 'Month'
