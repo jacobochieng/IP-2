@@ -16,3 +16,5 @@ participants.forEach(function(male){
 })
 return {Day of the week (d) = ( ( ('CC'/4) -2*'CC'-1) + ((5*'YY'/4) ) + ((26*('MM'+1)/10)) + 'DD' ) 'mod' 7
 }
+function=(d<=0) or (d>31)
+function=(m<= 0) or (m > 12)  
