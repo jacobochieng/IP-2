@@ -18,3 +18,4 @@ return {Day of the week (d) = ( ( ('CC'/4) -2*'CC'-1) + ((5*'YY'/4) ) + ((26*('M
 }
 function=(d<=0) or (d>31)
 function=(m<= 0) or (m > 12)  
+var participants = ("Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame","Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama")
