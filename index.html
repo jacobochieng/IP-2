@@ -35,15 +35,20 @@ function validateForm() {
       <input type="number" class="form-control" name="date" id= "date" placeholder="Date of birth" min="0
       max="31" required>
     </div>
-    
+  </br>
+    <div class="form-check">choose your gender</div>
+      <label for="gender">Female</label>
+    </div> 
+  </br>
+    <div class="form-check">
+      <label for="gender">Male</label>
+      <input type="radio" class="check-label" name="gender" id="male" required>
+    </div>
+  </br>
       <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
   Name: <input type="text" name="fname">
   <input type="submit" value="Enter">
-     </form>
-
-     <br>
-
-     <button onclick=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]>male</button>
-      <button onclick =["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]>female</button>
-  </body>
+   </form>
+  <br>
+ </body>
 </html> 
