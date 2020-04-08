@@ -9,7 +9,7 @@
       <title>Birthday Detector</title>
 	<p>This site will help the user identify the user the day of the week in which his or her birthday will occur. It simply will work through the user writing his or her name in the form given and the details will be assessed in order to give out the correct output.</p>        
 	  
-        <script>
+    <script>
 function validateForm() {
   var male = document.forms["myForm"]["fname"].value;
   if (male == "") {
@@ -17,8 +17,8 @@ function validateForm() {
     return false;
   }
 }
-        </script>
-	<script>
+      </script>
+	    <script>
 function validateForm() {
   var female = document.forms["myForm"]["fname"].value;
   if (female == "") {
@@ -26,10 +26,17 @@ function validateForm() {
     return false;
   }
 }
-        </script>
+      </script>
     </head>
    <body>
-     <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    
+    <div class="form group">
+      <label for="date">Date of month</label></br>
+      <input type="number" class="form-control" name="date" id= "date" placeholder="Date of birth" min="0
+      max="31" required>
+    </div>
+    
+      <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
   Name: <input type="text" name="fname">
   <input type="submit" value="Enter">
      </form>
