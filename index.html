@@ -15,7 +15,6 @@ function validateForm() {
   if (male == "") {
     alert("Name must be filled out");
     return false;
-  }
 }
       </script>
 	    <script>
@@ -31,14 +30,14 @@ function validateForm() {
    <body>
     
     <div class="form group">
-      <label for="date">Date of month</label></br>
+      <label for="date"><ins><b>Date of month</b></ins></label></br>
       <input type="number" class="form-control" name="date" id= "date" placeholder="Date of birth" min="0
       max="31" required>
     </div>
   </br>
-    <div class="form-check">choose your gender</div>
+    <div class="form-check"><ins><b>choose your gender</b></ins></div>
   </br>
-      <label for="gender">Female</label>
+    <label for="gender">Female</label>
     </div> 
   </br>
     <div class="form-check">
@@ -49,11 +48,12 @@ function validateForm() {
   <div class="submit">
     <button type="submit" class="btn btn-primary" onclick="getName();">Get Name</button>
   </div>
-  
+
       <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
   Name: <input type="text" name="fname">
   <input type="submit" value="Enter">
-   </form>
   <br>
- </body>
+     </body>
+   </form> 
+ <script type="text/javascript" scr="JS/scripts.js"></script>
 </html> 

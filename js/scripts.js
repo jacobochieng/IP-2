@@ -18,5 +18,16 @@ if  (CC =="" || CC > 20 || CC < 19){
 
 }    else {
      return true;
-     
+
+}
+
+
+}
+function getName() {
+     var CC = ParseInt(document.getElementById("century").value);
+     var YY = ParseInt(document.getElementById("year").value);
+     var MM = ParseInt(document.getElementById("month").value);
+     var DD = ParseInt(document.getElementById("date").value);
+
+     var dayOfTheWeek =Math.abs(parseInt(((CC/4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7);
 }
