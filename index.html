@@ -11,47 +11,52 @@
  
   <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
 
-    <script>
-function validateForm() {
-  var maleName = document.forms["myForm"]["fname"].value;
-  if (maleName == "") {
-    alert("Name must be filled out");
-    return false;
+   <script>
+     function validateForm() {
+     var maleName = document.forms["myForm"]["fname"].value;
+       if (maleName == "") {
+       alert("Name must be filled out");
+       return false;
 }
-      </script>
-	    <script>
-function validateForm() {
-  var female = document.forms["myForm"]["fname"].value;
-  if (female == "") {
-    alert("Name must be filled out");
-    return false;
-  }
+    </script>
+
+	  <script>
+     function validateForm() {
+     var female = document.forms["myForm"]["fname"].value;
+      if (female == "") {
+      alert("Name must be filled out");
+      return false;
 }
-      </script>
-    </head>
-   <body>
-    
+    </script>
+  </head>
+
+  <body>
+    <div class="form group"> 
+      <label for= "year"><b><ins>Year</ins></b></label>
+      <input type= "number" class="form-control" name="year" id= "year" placeholder="Year of birth" min="1 max= 12" required>
+    </div>
+
+      </br>
+
     <div class="form group">
       <label for="date"><ins><b>Date of month</b></ins></label></br>
       <input type="number" class="form-control" name="date" id= "date" placeholder="Date of birth" min="0
-      max= "31" required>
-    </div>
-  </br>
-    <div class="form-check"><ins><b>choose your gender</b></ins></div>
-  </br>
-    <label for="gender">Female</label>
-    </div> 
-  </br>
-    <div class="form-check">
-      <label for="gender">Male</label>
-      <input type="radio" class="check-label" name="gender" id="male" required>
-    </div>
-  </br>
-  <div class="submit">
-    <button type="submit" class="btn btn-primary" onclick="getName();">Get Name</button>
-  </div>
+      max= 1" required>
+    </div></br>
 
+    <div class="form-check"><ins><b>choose your gender</b></ins></div></br>
+    <label for="gender">Female</label>
+    </div></br>
+
+    <div class="form-check">
+      <label for="gender">Male</label> 
+      <input type="radio" class="check-label" name="gender" id="male" required>
+    </div></br>
+
+    <div class="submit">
+      <button type="submit" class="btn btn-primary" onclick="getName();">Get Name</button>
+    </div>
+    <script type="text/javascript" scr="JS/scripts.js"></script>
+      </form> 
     </body>
-   </form> 
- <script type="text/javascript" scr="JS/scripts.js"></script>
 </html> 
