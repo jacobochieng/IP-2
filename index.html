@@ -8,11 +8,13 @@
     <div class= "clear"></div>
       <title>Birthday Detector</title>
 	<p>This site will help the user identify the user the day of the week in which his or her birthday will occur. It simply will work through the user writing his or her name in the form given and the details will be assessed in order to give out the correct output.</p>        
-	  
+ 
+  <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+
     <script>
 function validateForm() {
-  var male = document.forms["myForm"]["fname"].value;
-  if (male == "") {
+  var maleName = document.forms["myForm"]["fname"].value;
+  if (maleName == "") {
     alert("Name must be filled out");
     return false;
 }
@@ -32,7 +34,7 @@ function validateForm() {
     <div class="form group">
       <label for="date"><ins><b>Date of month</b></ins></label></br>
       <input type="number" class="form-control" name="date" id= "date" placeholder="Date of birth" min="0
-      max="31" required>
+      max= "31" required>
     </div>
   </br>
     <div class="form-check"><ins><b>choose your gender</b></ins></div>
@@ -49,11 +51,7 @@ function validateForm() {
     <button type="submit" class="btn btn-primary" onclick="getName();">Get Name</button>
   </div>
 
-      <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-  Name: <input type="text" name="fname">
-  <input type="submit" value="Enter">
-  <br>
-     </body>
+    </body>
    </form> 
  <script type="text/javascript" scr="JS/scripts.js"></script>
 </html> 
