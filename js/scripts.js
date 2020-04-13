@@ -1,84 +1,54 @@
-function validate ()
+$(document).ready(function(){
+     $("#myBirthDate").mask("99/99/9999");
+ });
+
+  
+function getName () 
 var CC = parseInt(document.getElementById("century").value);
 var YY = parseInt(document.getElementById("year").value);
 var MM = parseInt(document.getElementById("month").value);
 var DD = parseInt(document.getElementById("date").value);
+var myGender = document.getElementById("gender")
+var dateOfBirth = new Date(myBirthday)  
+var dayOfTheWeek = dateOfBirth.getDay();
+var myBirthday = document.getElementById("myBirthdate").value
+var days = ["Sunday","Monday","Tuesday","Thursday","Friday","Saturday"]
 
-if  (CC =="" || CC > 20 || CC < 19){
-     alert("only the 20th and the 19th centuery are allowed")
-     return false;
-
-}    else if (YY == "" || YY > 99 || YY < 0) {
-     alert("Only years between 0 and 99 can be entered")
-     return false;
-
-}    else if ( DD == "" || DD > 31 || DD < 1) {
-     alert("Enter a date between 1 and 31");
-     return false;
-
-}    else {
-     return true;
-
-}
-
-}
 function getName() {
      var CC = ParseInt(document.getElementById("century").value);
      var YY = ParseInt(document.getElementById("year").value);
      var MM = ParseInt(document.getElementById("month").value);
      var DD = ParseInt(document.getElementById("date").value);
+  
+    
+     if(myBirthday === ""){
+          document.getElementById('Information').innerHTML = "<div class=\"alert alert-danger\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">x</button><bold>SORRY</bold> INVALID DATA!</div>";
+          $('#message');
+      }
+      else {
+          for(var i=0;i<myGender.length;i++){
+              if(myGender[i].checked){
+                  if(myGender[i].value === "Male"){
+                      document.getElementById('message').innerHTML = "<span><i class=\"fa fa-male\"></i></span>&nbsp;&nbsp; Born on a <span>" + days[dayOfTheWeek] + "</span>, Your Akan Name's <span>" + maleAkanNames[dayOfTheWeek] + "</span>";
+                      $('#message span:first-child').addClass("animated fadeInDown");
+                      $('#message span:last-child').addClass("animated fadeInUp");
+                  }
+                  else {
+                      document.getElementById('message').innerHTML = "<span><i class=\"fa fa-female\"></i></span>&nbsp;&nbsp; Born on a <span>" + days[dayOfTheWeek] + "</span>, Your Akan Name's <span>" + femaleAkanNames[dayOfTheWeek] + "</span>";
+                      $('#message span:first-child').addClass("animated fadeInDown");
+                      $('#message span:last-child').addClass("animated fadeInUp");
+                  }
+                  break;
+              }    
+              else {
+                  document.getElementById('message').innerHTML = "<div class=\"alert alert-danger\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">x</button><strong>Oh snap!</strong> You Should Select a Gender Too Determine Your Akan Name!</div>";
+                  $('#message').addClass("animated shake");
+              }
+          }
+     }
 
-     var dayOfTheWeek =Math.abs(parseInt(((CC/4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7);
+  }
 
-     var femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
-     var maleNames = ["Kwasi", "Kwadwo", "Kwabena","Kwaku", "Yaw", "Kofi", "Kwame"];
-
-     if  (dayOfTheWeek == 0 && femaleNames.checked == true){
-          alert("You were born on Saturday and your akan Name is " + femaleNames[6])
-     
-}    else if (dayOfTheWeek == 1 && femaleNames.checked == true){
-          alert("You were born on Saturday and your akan Name is " + femaleNames[0])
-
-}   else if (dayOfTheWeek == 2 && femaleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + femaleNames[1])
-
-}   else if (dayOfTheWeek == 3 && femaleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + femaleNames[2])
-
-}   else if (dayOfTheWeek == 4 && femaleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + femaleNames[3])
-
-}   else if (dayOfTheWeek == 5 && femaleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + femaleNames[4])
-
-}   else if (dayOfTheWeek == 6 && femaleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + femaleNames[5])
-
-}   else {
-     return false;
-} 
- 
-     if  (dayOfTheWeek == 0 && maleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + maleNames[6])
-
-}    else if (dayOfTheWeek == 1 && maleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + maleNames[0])     
-
-}    else if (dayOfTheWeek == 2 && maleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + maleNames[1])
-
-}    else if (dayOfTheWeek == 3 && maleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + maleNames[2])
-
-}    else if (dayOfTheWeek == 4 && maleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + maleNames[3])
-
-}     else if (dayOfTheWeek == 5 && maleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + maleNames[4])
-
-}     else if (dayOfTheWeek == 6 && maleNames.checked == true){
-     alert("You were born on Saturday and your akan Name is " + maleNames[5])
-
-}    else {
-     return false;
-}
+  function clearAkanMessage(){
+     document.getElementById('message').innerHTML = "";
+ }
